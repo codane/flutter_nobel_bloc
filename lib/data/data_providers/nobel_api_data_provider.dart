@@ -7,6 +7,7 @@ class NobelApiDataProvider {
   NobelApiDataProvider()
       : _dio = Dio(BaseOptions(baseUrl: NobelApiConstants.baseUrl));
 
+  // GET request, returns raw data
   Future<Response> getApiData(
       {required int apiOffset, required String categoryAbbreviation}) async {
     try {

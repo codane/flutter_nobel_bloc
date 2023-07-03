@@ -7,6 +7,7 @@ final class NobelRepository {
   final NobelApiDataProvider dataProvider = NobelApiDataProvider();
 
 
+  // convert raw data into a list of Laureate models
   Future<List<LaureateModel>> getApiData({required int apiOffset, required String categoryAbbreviation}) async {
     try {
       final apiResponse = await dataProvider.getApiData(apiOffset: apiOffset, categoryAbbreviation: categoryAbbreviation);

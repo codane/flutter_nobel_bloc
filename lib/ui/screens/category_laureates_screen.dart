@@ -73,11 +73,12 @@ class _CategoryLaureatesScreenState extends State<CategoryLaureatesScreen> {
                               return GestureDetector(
                                 onTap: () {
                                   Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => DetailScreen(
-                                              clickedLaureate:
-                                                  currentLaureate)));
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => DetailScreen(
+                                          clickedLaureate: currentLaureate),
+                                    ),
+                                  );
                                 },
                                 child: LaureateItem(
                                   laureateName:
