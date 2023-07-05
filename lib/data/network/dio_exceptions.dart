@@ -1,26 +1,26 @@
 import 'package:dio/dio.dart';
 
 class DioExceptions implements Exception {
-  late String exceptionMessage;
+  late String _exceptionMessage;
 
   DioExceptions.fromDioException(DioException dioException) {
     switch (dioException.type) {
       case DioExceptionType.cancel:
-        exceptionMessage = "Request to API server was cancelled";
+        _exceptionMessage = "Request to API server was cancelled";
         break;
       case DioExceptionType.unknown:
         if (dioException.message!.contains("SocketException")) {
-          exceptionMessage = 'No Internet';
+          _exceptionMessage = 'No Internet';
           break;
         }
-        exceptionMessage = "Unexpected error occurred";
+        _exceptionMessage = "Unexpected error occurred";
         break;
       default:
-        exceptionMessage = "Something went wrong";
+        _exceptionMessage = "Something went wrong";
         break;
     }
   }
 
   @override
-  String toString() => exceptionMessage;
+  String toString() => _exceptionMessage;
 }

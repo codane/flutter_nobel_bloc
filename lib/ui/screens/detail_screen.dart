@@ -56,9 +56,10 @@ class DetailScreen extends StatelessWidget {
                         rowText: "${clickedLaureate?.birth?.date}",
                       ),
                       BiographyContainerRow(
-                          icon: const Icon(Icons.place),
-                          rowText:
-                              "${clickedLaureate?.birth?.place?.country?.en}",),
+                        icon: const Icon(Icons.place),
+                        rowText:
+                            "${clickedLaureate?.birth?.place?.country?.en}",
+                      ),
                     ]),
                 const SizedBox(
                   height: 20,
@@ -81,10 +82,6 @@ class DetailScreen extends StatelessWidget {
                       PrizeInfoRow(
                         prizeRowText:
                             "Prize amount: ${clickedLaureatePrizes?[0].prizeAmount}",
-                      ),
-                      PrizeInfoRow(
-                        prizeRowText:
-                            "Prize status: ${clickedLaureatePrizes?[0].prizeStatus}",
                       ),
                       PrizeInfoRow(
                         prizeRowText:

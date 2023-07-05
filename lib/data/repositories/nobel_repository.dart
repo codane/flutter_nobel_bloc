@@ -4,13 +4,13 @@ import 'package:flutter_nobel/data/models/laureate_model.dart';
 import 'package:flutter_nobel/data/network/dio_exceptions.dart';
 
 final class NobelRepository {
-  final NobelApiDataProvider dataProvider = NobelApiDataProvider();
+  final NobelApiDataProvider _dataProvider = NobelApiDataProvider();
 
 
   // convert raw data into a list of Laureate models
   Future<List<LaureateModel>> getApiData({required int apiOffset, required String categoryAbbreviation}) async {
     try {
-      final apiResponse = await dataProvider.getApiData(apiOffset: apiOffset, categoryAbbreviation: categoryAbbreviation);
+      final apiResponse = await _dataProvider.getApiData(apiOffset: apiOffset, categoryAbbreviation: categoryAbbreviation);
       final laureatesList = (apiResponse.data['laureates'] as List).map((laureate) => LaureateModel.fromMap(laureate)).toList();
       return laureatesList;
       
