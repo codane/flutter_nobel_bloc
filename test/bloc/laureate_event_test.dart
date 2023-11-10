@@ -1,4 +1,4 @@
-import 'package:flutter_nobel/bloc/laureate_bloc.dart';
+import 'package:flutter_nobel/presentation/bloc/laureate_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_nobel/ui/screens/splash_screen.dart';
+import 'package:flutter_nobel/presentation/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

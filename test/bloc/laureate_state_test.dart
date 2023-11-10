@@ -1,5 +1,5 @@
-import 'package:flutter_nobel/bloc/laureate_bloc.dart';
-import 'package:flutter_nobel/data/models/laureate_model.dart';
+import 'package:flutter_nobel/presentation/bloc/laureate_bloc.dart';
+import 'package:flutter_nobel/domain/model/laureate_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
