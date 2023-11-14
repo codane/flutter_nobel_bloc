@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_nobel/di/di_container.dart';
 import 'package:flutter_nobel/presentation/screens/splash_screen.dart';
 
 void main() {
+  setupDependencies();
   runApp(const MyApp());
 }
 

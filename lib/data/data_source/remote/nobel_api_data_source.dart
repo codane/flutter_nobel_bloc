@@ -4,15 +4,16 @@ import 'package:flutter_nobel/common/dio_exceptions.dart';
 import 'package:flutter_nobel/data/data_source/remote/dto/laureate_dto.dart';
 
 class NobelApiDataSource {
-  final Dio _dio;
+  final Dio dio;
 
-  NobelApiDataSource()
-      : _dio = Dio(BaseOptions(baseUrl: NobelApiConstants.baseUrl));
+  const NobelApiDataSource({
+    required this.dio,
+  });
 
-  Future<List<LaureateDto>> getApiData(
+  Future<List<LaureateDto>> getLaureatesByCategory(
       {required int apiOffset, required String categoryAbbreviation}) async {
     try {
-      final Response apiResponse = await _dio.get(
+      final Response apiResponse = await dio.get(
         NobelApiConstants.laureatesUrlPath,
         queryParameters: {
           'offset': apiOffset,
