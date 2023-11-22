@@ -1,7 +1,7 @@
 import 'package:flutter_nobel/domain/model/laureate_model.dart';
 import 'package:flutter_nobel/domain/repository/nobel_repository.dart';
 
-class GetLaureatesUseCase {
+final class GetLaureatesUseCase {
   final NobelRepository repository;
 
   const GetLaureatesUseCase({
