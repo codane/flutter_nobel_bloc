@@ -1,0 +1,11 @@
+{
+    "date" : "Test date",
+    "place" : {
+        "city" : {
+            "en" : "Test birth city"
+        },
+        "country" : {
+            "en" : "Test birth country"
+        }
+    }
+}

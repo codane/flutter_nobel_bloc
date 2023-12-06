@@ -1,0 +1,11 @@
+{
+    "awardYear": "Test year",
+    "category": {
+        "en": "Test prize category"
+    },
+    "prizeStatus": "Test prize status",
+    "motivation": {
+        "en": "Test prize motivation"
+    },
+    "prizeAmount": 100
+}

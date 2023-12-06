@@ -2,18 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nobel/presentation/widgets/category_card.dart';
 
 class HomeScreenGridView extends StatelessWidget {
-  const HomeScreenGridView({super.key});
+  const HomeScreenGridView({super.key, required this.isDesktop});
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: GridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 20,
-          crossAxisSpacing: 15,
-          children: const [
-            CategoryCard(
+  final bool isDesktop;
+
+  final List<CategoryCard> categories =const [CategoryCard(
                 categoryAbbreviation: "phy",
                 categoryTitle: "Physics",
                 categorySvg: "assets/physics.svg"),
@@ -36,8 +29,21 @@ class HomeScreenGridView extends StatelessWidget {
             CategoryCard(
                 categoryAbbreviation: "eco",
                 categoryTitle: "Economic Sciences",
-                categorySvg: "assets/economy.svg"),
-          ]),
+                categorySvg: "assets/economy.svg"),];
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: isDesktop ? GridView.count(
+          crossAxisCount: 3,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 15,
+          children: categories) : GridView.count(
+          crossAxisCount: 2,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 15,
+          children: categories)
     );
   }
 }

@@ -16,7 +16,6 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        //ref.watch(categoryAbbreviationProvider.notifier).state = categoryAbbreviation;
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => CategoryScreen(categoryAbbreviation: categoryAbbreviation)),

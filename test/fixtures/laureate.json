@@ -1,0 +1,21 @@
+{
+    "id": "Test id",
+    "fullName": {
+        "en": "Test laureate full name"
+    },
+    "gender": "Test gender",
+    "birth": {
+        "date": "Test laureate date",
+        "place": {
+            "city": {},
+            "country": {}
+        }
+    },
+    "wikipedia": {
+        "english": "Test laureate wikipedia"
+    },
+    "nobelPrizes": [
+        {},
+        {}
+    ]
+}

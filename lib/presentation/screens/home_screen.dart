@@ -7,24 +7,26 @@ import '../../common/theme/nobel_palette.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final bool isDesktop = MediaQuery.of(context).size.width > 800;
+    return  Scaffold(
       backgroundColor: NobelPalette.nobelGreen,
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.only(left: 16, right: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children:  [
-              SizedBox(
+            children: [
+              const SizedBox(
                 height: 40,
               ),
-              HomeScreenTop(),
+              const HomeScreenTop(),
               Expanded(
-                child: HomeScreenGridView(),
+                child: HomeScreenGridView(isDesktop: isDesktop,),
               ),
             ],
           ),
